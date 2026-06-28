@@ -125,6 +125,9 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+  ::selection {
+    @apply bg-amber-200 text-slate-950;
   }
 }
