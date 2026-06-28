@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MockChatbot } from "../../components/mock-chatbot";
 
 export default function AboutPage() {
   return (
@@ -23,6 +24,7 @@ export default function AboutPage() {
           ← Back to homepage
         </Link>
       </div>
+      <MockChatbot />
     </main>
   );
 }

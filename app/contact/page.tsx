@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MockChatbot } from "../../components/mock-chatbot";
 
 export default function ContactPage() {
   return (
@@ -19,19 +20,25 @@ export default function ContactPage() {
 
         <form className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
           <div className="grid gap-4 sm:grid-cols-2">
-            <label className="text-sm text-slate-700">
-              Name
-              <input className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="Your name" />
-            </label>
-            <label className="text-sm text-slate-700">
-              Email
-              <input className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="you@example.com" />
-            </label>
+            <div>
+              <label htmlFor="contact-name" className="text-sm text-slate-700">
+                Name
+              </label>
+              <input id="contact-name" className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="Your name" />
+            </div>
+            <div>
+              <label htmlFor="contact-email" className="text-sm text-slate-700">
+                Email
+              </label>
+              <input id="contact-email" className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="you@example.com" />
+            </div>
           </div>
-          <label className="mt-4 block text-sm text-slate-700">
-            Message
-            <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="Tell us what you are looking for..." />
-          </label>
+          <div className="mt-4">
+            <label htmlFor="contact-message" className="text-sm text-slate-700">
+              Message
+            </label>
+            <textarea id="contact-message" className="mt-2 min-h-32 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none" placeholder="Tell us what you are looking for..."></textarea>
+          </div>
           <button type="button" className="mt-5 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
             Send inquiry
           </button>
@@ -43,6 +50,7 @@ export default function ContactPage() {
           ← Back to homepage
         </Link>
       </div>
+      <MockChatbot />
     </main>
   );
 }

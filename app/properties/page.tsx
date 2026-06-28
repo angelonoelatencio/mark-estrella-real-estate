@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { properties } from "@/lib/content";
+import { MockChatbot } from "@/components/mock-chatbot";
 
 export default function PropertiesPage() {
   return (
@@ -34,6 +35,7 @@ export default function PropertiesPage() {
           ))}
         </div>
       </div>
+      <MockChatbot />
     </main>
   );
 }

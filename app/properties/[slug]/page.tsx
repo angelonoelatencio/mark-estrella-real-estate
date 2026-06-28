@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { properties } from "@/lib/content";
+import { properties } from "../../../lib/content";
 
 export function generateStaticParams() {
   return properties.map((property) => ({ slug: property.slug }));
 }
 
-export default async function PropertyDetail({ params }: { params: Promise<{ slug: string }> }) {
+export default async function PropertyDetail({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
   const { slug } = await params;
   const property = properties.find((item) => item.slug === slug);
 
