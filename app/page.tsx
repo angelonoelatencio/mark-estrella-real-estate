@@ -7,11 +7,8 @@ import { properties, siteContent } from "../lib/content";
 import { MockChatbot } from "../components/mock-chatbot";
 
 const heroImages = [
-  { src: "/jumbotron-sample.svg", label: "Ocean-view retreat" },
-  { src: "/jumbotron-sample-1.svg", label: "Mountain cabin interior" },
-  { src: "/jumbotron-sample-2.svg", label: "Coastal terrace view" },
-  { src: "/jumbotron-sample-3.svg", label: "Sunlit family lounge" },
-  { src: "/jumbotron-sample-4.svg", label: "Scenic hillside escape" },
+  { src: "/picco_terra_1.jpg", label: "Picco Terraces" },
+  { src: "/mvillage_1.jpg", label: "MVillage" },
 ] as const;
 
 function getShowcaseImage(index: number) {
